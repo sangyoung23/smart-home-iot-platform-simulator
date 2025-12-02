@@ -1,11 +1,14 @@
 spring:
   application:
     name: IoT Simulator
+  task:
+    scheduling:
+      pool:
+        size: 5
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
     producer:
-      group-id: sensor-group
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
