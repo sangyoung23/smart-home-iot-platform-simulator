@@ -19,7 +19,7 @@ public class SensorSimulatorService {
 
     private double energyTotal = 0.0; // 누적 전력(kWh)
 
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = 60000)
     public void sendSensorData() throws JsonProcessingException {
 
         // 1. 온도 센서
