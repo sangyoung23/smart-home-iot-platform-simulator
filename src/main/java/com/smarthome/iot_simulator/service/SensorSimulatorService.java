@@ -17,7 +17,7 @@ public class SensorSimulatorService {
     private final KafkaTemplate<String, String> kafkaTemplate;
     private final ObjectMapper objectMapper;
 
-    private double energyTotal = 0.0; // 누적 전력(kWh)
+    private double energyTotal = 0.0;
 
     @Scheduled(fixedRate = 7_200_000) // 2시간
     public void sendSensorData() throws JsonProcessingException {
